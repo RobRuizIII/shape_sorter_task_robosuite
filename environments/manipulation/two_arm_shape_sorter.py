@@ -11,6 +11,8 @@ from robosuite.utils.observables import Observable, sensor
 from models.objects.composite_body.shape_sorter import ShapeSorterObject
 from models.objects.composite.shape_pegs import CrossPegObject, DiamondPegObject, PentagonPegObject, TrianglePegObject
 
+# Adapted from two_arm_peg_in_hole.py manipulation task
+
 
 class TwoArmShapeSorter(TwoArmEnv):
 
