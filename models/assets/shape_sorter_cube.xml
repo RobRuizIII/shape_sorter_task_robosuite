@@ -1,0 +1,208 @@
+<mujoco model="base">
+  <asset>
+    <texture file="../textures/red-wood.png" type="cube" name="red-wood" />
+    <material name="plate_mat" texture="red-wood" texrepeat="3 3" specular="0.4" shininess="0.1" />
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+
+        <!-- BASE -->
+        <body name="base">
+        <geom pos="0 0 0" size="0.185 0.185 0.01" type="box" group="0" material="plate_mat"/>
+        </body>
+
+
+         <!-- HANDLE -->
+        <body name="handle">
+        <geom pos="0 0 -0.13" size="0.035 0.12" type="cylinder" group="0" material="plate_mat" />
+        </body>
+        
+
+
+
+
+
+
+        <!-- TOP -->
+
+        <body name="pentagon">
+
+        <geom pos="0 0.12 0.35" size="0.185 0.065 0.01" type="box" group="0" material="plate_mat"/>
+        <geom pos="0 -0.12 0.35" size="0.185 0.065 0.01" type="box" group="0" material="plate_mat"/>
+        <geom pos="-0.11 0 0.35" size="0.055 0.055 0.01" type="box" group="0" material="plate_mat" />
+
+        <!-- middle of  top triangle -->
+        <geom pos="0.11 0 0.35" size="0.055 0.006875 0.01" type="box" group="0" material="plate_mat" />
+
+        <!-- left of top triangle -->
+        <geom pos="0.1060714275 0.0103125 0.35" size="0.0589285725 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.102142855 0.0171875 0.35" size="0.062857145 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0982142825 0.0240625 0.35" size="0.0667857175 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.09428571 0.0309375 0.35" size="0.07071429 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0903571375 0.0378125 0.35" size="0.0746428625 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.086428565 0.0446875 0.35" size="0.078571435 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0824999925 0.0515625 0.35" size="0.0825000075 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+
+        <!-- right of top triangle -->
+        <geom pos="0.1060714275 -0.0103125 0.35" size="0.0589285725 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.102142855 -0.0171875 0.35" size="0.062857145 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0982142825 -0.0240625 0.35" size="0.0667857175 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.09428571 -0.0309375 0.35" size="0.07071429 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0903571375 -0.0378125 0.35" size="0.0746428625 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.086428565 -0.0446875 0.35" size="0.078571435 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0824999925 -0.0515625 0.35" size="0.0825000075 0.0034375 0.01" type="box" group="0" material="plate_mat" />
+
+        </body>
+
+
+
+
+
+
+
+
+        <!-- FRONT -->
+
+        <body name="diamond">
+
+        <geom pos="0.12 -0.175 0.175" size="0.065 0.01 0.165" type="box" group="0" material="plate_mat"/>
+        <geom pos="-0.12 -0.175 0.175" size="0.065 0.01 0.165" type="box" group="0" material="plate_mat"/>
+
+        <!-- middle of  top triangle -->
+        <geom pos="0 -0.175 0.285" size="0.006875 0.01 0.055" type="box" group="0" material="plate_mat" />
+
+        <!-- left of top triangle -->
+        <geom pos="-0.0103125 -0.175 0.2810714275" size="0.0034375 0.01 0.0589285725" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0171875 -0.175 0.277142855" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0240625 -0.175 0.2732142825" size="0.0034375 0.01 0.0667857175" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0309375 -0.175 0.26928571" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0378125 -0.175 0.2653571375" size="0.0034375 0.01 0.0746428625" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0446875 -0.175 0.261428565" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0515625 -0.175 0.2574999925" size="0.0034375 0.01 0.0825000075" type="box" group="0" material="plate_mat" />
+
+        <!-- right of top triangle -->
+        <geom pos="0.0103125 -0.175 0.2810714275" size="0.0034375 0.01 0.0589285725" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0171875 -0.175 0.277142855" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0240625 -0.175 0.2732142825" size="0.0034375 0.01 0.0667857175" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0309375 -0.175 0.26928571" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0378125 -0.175 0.2653571375" size="0.0034375 0.01 0.0746428625" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0446875 -0.175 0.261428565" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0515625 -0.175 0.2574999925" size="0.0034375 0.01 0.0825000075" type="box" group="0" material="plate_mat" />
+
+        
+        <!-- middle of bottom triangle -->
+        <geom pos="0 -0.175 0.065" size="0.006875 0.01 0.055" type="box" group="0" material="plate_mat" />
+        
+        <!-- left of bottom triangle -->
+        <geom pos="-0.0103125 -0.175 0.0689285725" size="0.0034375 0.01 0.0589285725" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0171875 -0.175 0.072857145" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0240625 -0.175 0.0767857175" size="0.0034375 0.01 0.0667857175" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0309375 -0.175 0.08071429" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0378125 -0.175 0.0846428625" size="0.0034375 0.01 0.0746428625" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0446875 -0.175 0.088571435" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0515625 -0.175 0.0925000075" size="0.0034375 0.01 0.0825000075" type="box" group="0" material="plate_mat" />
+
+        <!-- right of bottom triangle -->
+
+        <geom pos="0.0103125 -0.175 0.0689285725" size="0.0034375 0.01 0.0589285725" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0171875 -0.175 0.072857145" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0240625 -0.175 0.0767857175" size="0.0034375 0.01 0.0667857175" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0309375 -0.175 0.08071429" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0378125 -0.175 0.0846428625" size="0.0034375 0.01 0.0746428625" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0446875 -0.175 0.088571435" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0515625 -0.175 0.0925000075" size="0.0034375 0.01 0.0825000075" type="box" group="0" material="plate_mat" />
+
+        </body>
+
+
+
+
+
+
+
+
+
+
+        <!-- BACK -->
+
+        <body name="triangle">
+
+        <geom pos="0.12 0.175 0.175" size="0.065 0.01 0.165" type="box" group="0" material="plate_mat"/>
+        <geom pos="-0.11 0.175 0.175" size="0.055 0.01 0.165" type="box" group="0" material="plate_mat"/>
+        <geom pos="0 0.175 0.065" size="0.055 0.01 0.055" type="box" group="0" material="plate_mat" />
+
+        <!-- middle of triangle -->
+        <geom pos="0 0.175 0.285" size="0.006875 0.01 0.055" type="box" group="0" material="plate_mat" />
+
+        <!-- left of triangle -->
+        <geom pos="0.0103125 0.175 0.277142855" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0171875 0.175 0.26928571" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0240625 0.175 0.261428565" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0309375 0.175 0.25357142" size="0.0034375 0.01 0.08642858" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0378125 0.175 0.245714275" size="0.0034375 0.01 0.094285725" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0446875 0.175 0.23785713" size="0.0034375 0.01 0.10214287" type="box" group="0" material="plate_mat" />
+        <geom pos="0.0515625 0.175 0.229999985" size="0.0034375 0.01 0.110000015" type="box" group="0" material="plate_mat" />
+
+        <!-- right of triangle -->
+        <geom pos="-0.0103125 0.175 0.277142855" size="0.0034375 0.01 0.062857145" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0171875 0.175 0.26928571" size="0.0034375 0.01 0.07071429" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0240625 0.175 0.261428565" size="0.0034375 0.01 0.078571435" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0309375 0.175 0.25357142" size="0.0034375 0.01 0.08642858" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0378125 0.175 0.245714275" size="0.0034375 0.01 0.094285725" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0446875 0.175 0.23785713" size="0.0034375 0.01 0.10214287" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.0515625 0.175 0.229999985" size="0.0034375 0.01 0.110000015" type="box" group="0" material="plate_mat" />
+
+        </body>
+
+
+
+
+
+
+
+        <!-- LEFT -->
+
+        <body name="square">
+
+        <geom pos="-0.175 0.12 0.175" size="0.01 0.065 0.165" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.175 -0.11 0.175" size="0.01 0.055 0.165" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.175 0 0.295" size="0.01 0.055 0.065" type="box" group="0" material="plate_mat" />
+        <geom pos="-0.175 0 0.065" size="0.01 0.055 0.055" type="box" group="0" material="plate_mat" />
+
+        </body>
+
+
+
+
+
+
+
+        <!-- RIGHT -->
+
+        <body name="cross">
+
+        <geom pos="0.175 -0.11 0.175" size="0.01 0.055 0.165" type="box" group="0" material="plate_mat" />
+        <geom pos="0.175 0.11 0.175" size="0.01 0.055 0.165" type="box" group="0" material="plate_mat" />
+        
+        <geom pos="0.175 0 0.295" size="0.01 0.018 0.065" type="box" group="0" material="plate_mat" />
+        <geom pos="0.175 -0.0365 0.277" size="0.01 0.0185 0.083" type="box" group="0" material="plate_mat" />
+        <geom pos="0.175 0.0365 0.277" size="0.01 0.0185 0.083" type="box" group="0" material="plate_mat" />
+
+
+
+        <geom pos="0.175 0 0.065" size="0.01 0.018 0.055" type="box" group="0" material="plate_mat" />
+        <geom pos="0.175 -0.0365 0.083" size="0.01 0.0185 0.073" type="box" group="0" material="plate_mat" />
+        <geom pos="0.175 0.0365 0.083" size="0.01 0.0185 0.073" type="box" group="0" material="plate_mat" />
+
+        </body>
+
+
+
+      </body>
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 -0.02" name="bottom_site"/>
+      <site rgba="0 0 0 0" size="0.005" pos="0 0 0.02" name="top_site"/>
+      <site rgba="0 0 0 0" size="0.005" pos="0.25 0.25 0.1" name="horizontal_radius_site"/>
+    </body>
+  </worldbody>
+</mujoco>
